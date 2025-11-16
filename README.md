@@ -1,7 +1,6 @@
 # ₊˚⊹ My Personal Website ˚⊹₊
 
-My SvelteKit personal website, built to feel personal and expressive.  
-It features Wikipedia-inpsired layouts, a custom Finder UI, and a mix of academic, professional, and personal sections.
+My SvelteKit personal website, featuring a custom Finder UI, Wikipedia-inpsired layouts, and a mix of academic, professional, and personal sections.
 
 Hosted on **GitHub Pages**.
 
