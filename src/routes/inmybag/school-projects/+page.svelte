@@ -6,7 +6,7 @@
         name: "TA Queue",
         dateTaken: "Fall 2025",
         language: "JS / HTML",
-        repoUrl: "https://github.com/basiltiongson0/TA-Queue-Project"
+        repoUrl: "https://github.com/juliafbowman/taQueue"
       },
       {
         name: "Bomberman Game",
