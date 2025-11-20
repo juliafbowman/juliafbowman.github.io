@@ -278,13 +278,13 @@
     }
   
     .link-image {
-      opacity: 0.65;
+      opacity: 0.5;
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
   
     .link-image:hover {
       opacity: 0.95;
-      transform: translateY(-1px) scale(1.06);
+      transform: translateY(-1px) scale(1.00);
     }
   
     .github {
