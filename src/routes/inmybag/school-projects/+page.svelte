@@ -49,8 +49,8 @@
   
   <div class="file-container">
     <div class="file-header">
-      <div class="header-cell">Course</div>
-      <div class="header-cell">Date Taken</div>
+      <div class="header-cell">Project</div>
+      <div class="header-cell">Developed</div>
       <div class="header-cell">Language</div>
       <div class="header-cell icon-header"></div>
     </div>
