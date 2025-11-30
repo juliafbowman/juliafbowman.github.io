@@ -2,6 +2,30 @@
     import { asset } from '$app/paths';
 
     const items = [
+        {
+        name: "Show Saver",
+        dateTaken: "Fall 2025",
+        language: "Flask / React / MySQL",
+        repoUrl: "https://github.com/juliafbowman/showSaver"
+      },
+      {
+        name: "Hello Roomie",
+        dateTaken: "Spring 2025",
+        language: "Flask / React / Axios",
+        repoUrl: "https://github.com/juliafbowman/Hello-Roomie"
+      },
+      {
+        name: "Systrum",
+        dateTaken: "Spring 2025",
+        language: "Python / React",
+        repoUrl: "https://github.com/edmuri/Systrum"
+      },
+      {
+        name: "One Gram (Hackathon)",
+        dateTaken: "Spring 2025",
+        language: "Python / JS / HTML",
+        repoUrl: "https://github.com/juliafbowman/SparkHacks2025"
+      },
       {
         name: "TA Queue",
         dateTaken: "Fall 2025",
@@ -15,28 +39,10 @@
         repoUrl: "https://github.com/juliafbowman/bomberman"
       },
       {
-        name: "Hello Roomie",
-        dateTaken: "Spring 2025",
-        language: "Python / JS / HTML",
-        repoUrl: "https://github.com/juliafbowman/Hello-Roomie"
-      },
-      {
         name: "Heatstroke Wristband",
         dateTaken: "Fall 2024",
         language: "JS / HTML",
         repoUrl: "https://github.com/juliafbowman/heatStrokeWristband"
-      },
-      {
-        name: "Systrum",
-        dateTaken: "Spring 2025",
-        language: "Python / JS / HTML",
-        repoUrl: "https://github.com/edmuri/Systrum"
-      },
-      {
-        name: "One Gram (SparkHacks)",
-        dateTaken: "Spring 2025",
-        language: "Python / JS / HTML",
-        repoUrl: "https://github.com/juliafbowman/SparkHacks2025"
       },
     ];
   </script>
