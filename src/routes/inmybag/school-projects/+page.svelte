@@ -9,6 +9,12 @@
         repoUrl: "https://github.com/juliafbowman/showSaver"
       },
       {
+        name: "COVID-19 Visualization",
+        dateTaken: "Fall 2025",
+        language: "Python / Pandas / Vega-Lite",
+        repoUrl: "https://github.com/juliafbowman/embeddedView"
+      },
+      {
         name: "Hello Roomie",
         dateTaken: "Spring 2025",
         language: "Flask / React / Axios",
