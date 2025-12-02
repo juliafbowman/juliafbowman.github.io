@@ -34,7 +34,7 @@
       },
       {
         name: "TA Queue",
-        dateTaken: "Fall 2025",
+        dateTaken: "Spring 2025",
         language: "JS / HTML",
         repoUrl: "https://github.com/juliafbowman/taQueue"
       },
