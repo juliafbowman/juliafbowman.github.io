@@ -91,7 +91,7 @@
                 <h1 class="welcome-title">Welcome</h1>
   
                 <p class="intro-text">
-                  I’m <strong>Julia Bowman</strong>, a Computer Science student at the
+                  I'm <strong>Julia Bowman</strong>, a Computer Science student at the
                   <strong>University of Illinois Chicago</strong>.
                 </p>
   
@@ -160,7 +160,7 @@
       align-items: flex-start;
       gap: 1rem;
       padding: 35px;
-      width: 100%; /* keep full page width so card width is stable */
+      width: 100%;
     }
   
     /* -------------------------
@@ -173,6 +173,7 @@
       z-index: -1;
     }
   
+    /* add a littleee opacity to background flowers */
     .left-image {
       position: relative;
       margin-top: 100px;
@@ -181,6 +182,7 @@
     .left-image img {
       width: 300px;
       transform: translateY(-10%);
+      opacity: 0.92;
     }
   
     .left-image2 {
@@ -191,6 +193,7 @@
     .left-image2 img {
       width: 300px;
       transform: translateY(-20%);
+      opacity: 0.88;
     }
   
     .left-image3 {
@@ -201,6 +204,7 @@
     .left-image3 img {
       width: 250px;
       transform: translateY(-50%);
+      opacity: 0.85;
     }
   
     .left-image4 {
@@ -211,11 +215,13 @@
     .left-image4 img {
       width: 340px;
       transform: translateY(-10%);
+      opacity: 0.8;
     }
   
     .right-image img {
       width: 300px;
       transform: translateY(-50%);
+      opacity: 0.92;
     }
     .right-image {
       position: absolute;
@@ -226,6 +232,7 @@
   
     .right-image2 img {
       width: 250px;
+      opacity: 0.88;
     }
     .right-image2 {
       position: absolute;
@@ -236,6 +243,7 @@
   
     .right-image3 img {
       width: 200px;
+      opacity: 0.85;
     }
     .right-image3 {
       position: absolute;
@@ -246,6 +254,7 @@
   
     .right-image4 img {
       width: 300px;
+      opacity: 0.8;
     }
     .right-image4 {
       position: absolute;
@@ -261,7 +270,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.75rem;
       width: 100%;
     }
   
@@ -275,16 +284,20 @@
   
     .image-link {
       display: inline-block;
+      transition: transform 0.2s ease;
     }
   
     .link-image {
-      opacity: 0.5;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      opacity: 0.6;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                  opacity 0.25s ease;
+      filter: grayscale(0.2);
     }
   
-    .link-image:hover {
-      opacity: 0.95;
-      transform: translateY(-1px) scale(1.00);
+    .image-link:hover .link-image {
+      opacity: 1;
+      transform: translateY(-2px) scale(1.08);
+      filter: grayscale(0);
     }
   
     .github {
@@ -301,19 +314,22 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 520px; /* card width */
+      max-width: 540px; /* slightly wider */
       border-radius: 18px;
       border: 1px solid #e3e3e8;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+                  0 2px 8px rgba(0, 0, 0, 0.04);
       transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
   
     .browser-container.zoomed {
       transform: scale(1.03);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12),
+                  0 4px 12px rgba(0, 0, 0, 0.06);
     }
   
     /* height collapses, width stays the same bc of maxwidth/width above */
@@ -325,14 +341,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.55rem 1rem;
-      background: linear-gradient(to bottom, #fafafa, #f2f2f5);
-      border-bottom: 1px solid #dadade;
+      padding: 0.65rem 1.1rem;
+      background: linear-gradient(to bottom, #fafafa, #f5f5f7);
+      border-bottom: 1px solid #e0e0e4;
     }
   
     .control-lights {
       display: flex;
-      gap: 0.45rem;
+      gap: 0.5rem;
     }
   
     .control-lights .light {
@@ -345,11 +361,10 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-  
-      /* reset button defaults */
       border: none;
       padding: 0;
       outline: none;
+      transition: transform 0.1s ease;
     }
   
     .control-lights .light:focus-visible {
@@ -358,7 +373,7 @@
     }
   
     .control-lights .light:active {
-      transform: scale(0.9);
+      transform: scale(0.88);
     }
   
     .control-lights .light::before,
@@ -371,33 +386,33 @@
   
     .control-lights:hover .light::before,
     .control-lights:hover .light::after {
-      opacity: 0.75;
+      opacity: 0.7;
     }
   
     .control-lights .light.red {
-      background-color: #ff605c;
+      background-color: #fc635e;
     }
   
     .control-lights .light.red::before {
       content: "×";
       font-size: 10px;
       margin-top: -1px;
-      color: rgba(0, 0, 0, 0.7);
+      color: rgba(0, 0, 0, 0.65);
     }
   
     .control-lights .light.yellow {
-      background-color: #ffbd44;
+      background-color: #fdbc40;
     }
   
     .control-lights .light.yellow::before {
       content: "–";
       font-size: 12px;
       margin-top: -1px;
-      color: rgba(0, 0, 0, 0.7);
+      color: rgba(0, 0, 0, 0.65);
     }
   
     .control-lights .light.green {
-      background-color: #00ca4e;
+      background-color: #34c749;
     }
   
     /* top-left arrow (points ↙) */
@@ -406,7 +421,7 @@
       position: absolute;
       border-style: solid;
       border-width: 4px 4px 0 0;
-      border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+      border-color: rgba(0, 0, 0, 0.65) transparent transparent transparent;
       transform: translate(-1px, -1px) rotate(0deg);
     }
   
@@ -416,101 +431,122 @@
       position: absolute;
       border-style: solid;
       border-width: 0 0 4px 4px;
-      border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.65) transparent;
       transform: translate(1px, 1px) rotate(0deg);
     }
   
     .title {
-      font-size: 0.9rem;
-      color: #555;
+      font-size: 0.88rem;
+      color: #6b6b75;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
   
     /* -------------------------
            inner window 
     -------------------------- */
     .browser-box {
-      padding: 1.4rem 1.6rem;
+      padding: 1.8rem 2rem;
       background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.98),
-        rgba(250, 250, 250, 0.92)
+        rgba(252, 252, 253, 0.95)
       );
     }
   
     .welcome-title {
-      font-size: 1.7rem;
+      font-size: 1.85rem;
       font-weight: 600;
-      color: #505050;
-      margin: 0 0 0.6rem 0;
-      letter-spacing: -0.01em;
+      color: #3f3f3f;
+      margin: 0 0 0.8rem 0;
+      letter-spacing: -0.02em;
     }
   
     .intro-text,
     .status-text,
     .explore-text {
-      font-size: 1.1rem;
-      color: #666;
-      line-height: 1.5;
-      margin: 0.4rem 0;
+      font-size: 1.08rem;
+      color: #5c5c66;
+      line-height: 1.65;
+      margin: 0.5rem 0;
     }
   
     .intro-text strong {
-      color: #4c4c4c;
+      color: #3a3a44;
+      font-weight: 600;
     }
   
     .divider {
-      margin: 1rem 0;
+      margin: 1.2rem 0;
       border: none;
-      border-top: 1px solid #e4e4e4;
+      border-top: 1px solid #e8e8ec;
     }
   
-    /* Tooltip text */
+    /* tooltip text */
     .graduation {
-      color: #9696a4;
+      color: #8b8b98;
       position: relative;
       cursor: pointer;
+      border-bottom: 1px dotted #c4c4ce;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+  
+    .graduation:hover {
+      color: #6b6b78;
+      border-bottom-color: #9b9ba8;
     }
   
     .graduation::after {
       content: attr(data-tooltip);
       position: absolute;
-      bottom: 128%;
+      bottom: 135%;
       left: 50%;
       transform: translateX(-50%);
-      background: white;
-      padding: 0.25rem 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      font-size: 0.75rem;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.98);
+      padding: 0.35rem 0.65rem;
+      border-radius: 7px;
+      border: 1px solid #dedee4;
+      font-size: 0.78rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       opacity: 0;
       visibility: hidden;
-      transition: 0.15s ease;
+      transition: 0.2s ease;
+      white-space: nowrap;
+      pointer-events: none;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
   
     .graduation:hover::after {
       opacity: 1;
       visibility: visible;
+      transform: translateX(-50%) translateY(-2px);
     }
   
     .reopen-button {
       border-radius: 999px;
-      border: 1px solid #dadade;
-      padding: 0.4rem 0.9rem;
-      background: rgba(255, 255, 255, 0.9);
-      font-size: 0.85rem;
-      color: #555;
+      border: 1px solid #d4d4dc;
+      padding: 0.5rem 1.1rem;
+      background: rgba(255, 255, 255, 0.92);
+      font-size: 0.9rem;
+      color: #5c5c66;
+      font-weight: 500;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(6px);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
       opacity: 0.95;
     }
   
     .reopen-button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
       opacity: 1;
+    }
+  
+    .reopen-button:active {
+      transform: translateY(-1px);
     }
   
     /* -------------------------
@@ -539,13 +575,16 @@
     }
   
     @media (max-width: 480px) {
+      .browser-box {
+        padding: 1.5rem 1.6rem;
+      }
       .welcome-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
       .intro-text,
-      .status-text {
+      .status-text,
+      .explore-text {
         font-size: 1rem;
       }
     }
   </style>
-  
