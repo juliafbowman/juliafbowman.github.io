@@ -81,30 +81,28 @@
                 ></button>
               </div>
               <div class="title">
-                {isCollapsed ? 'hello (minimized)' : 'hello'}
+                {isCollapsed ? 'welcome (minimized)' : 'welcome'}
               </div>
             </div>
   
             <!-- content hides when collapsed -->
             {#if !isCollapsed}
               <div class="browser-box">
-                <h1 class="welcome-title">Welcome</h1>
-  
+                <h1 class="welcome-title">Hi, I'm Julia Bowman</h1>
+
                 <p class="intro-text">
-                  I'm <strong>Julia Bowman</strong>, a Computer Science student at the
+                  Recent graduate from the
                   <strong>University of Illinois Chicago</strong>.
                 </p>
-  
+                
                 <p class="status-text">
-                  Currently at
-                  <span class="graduation" data-tooltip="Graduation Fall 2025"
-                    >senior standing</span
-                  >.
+                  B.S. in Computer Science · 
+                  <span class="graduation" data-tooltip="Graduated Fall 2025">December 2025</span>
                 </p>
   
                 <hr class="divider" />
   
-                <p class="explore-text">Feel free to take a look around : )</p>
+                <p class="explore-text">Feel free to take a look around :)</p>
               </div>
             {/if}
           </div>
