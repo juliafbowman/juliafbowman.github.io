@@ -326,6 +326,10 @@
     text-decoration: none;
   }
 
+  .highlight:visited {
+  color: #6b4ba1; /* classic Wikipedia-ish purple */
+}
+
   .highlight:hover {
     text-decoration: underline;
     color: blue; 
