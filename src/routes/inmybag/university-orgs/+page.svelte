@@ -3,6 +3,8 @@
       { name: "Women in Cybersecurity", dateTaken: "2024 - Present", language: "Communications Lead", link: "/480" },
       { name: "WiCS", dateTaken: "2023 - Present", language: "Peer Mentor", link: "/480" },
       { name: "Capture the Flame", dateTaken: "2024 - Present", language: "Communications Lead", link: "/361" },
+      { name: "ACM", dateTaken: "2023 - 2025", language: "Student Member", link: "/480" },
+      { name: "SWE", dateTaken: "2023 - 2025", language: "Student Member", link: "/480" },
       { name: "Phi Theta Kappa", dateTaken: "2021 - Present", language: "Alumni Member", link: "/361" },
 
     ];
