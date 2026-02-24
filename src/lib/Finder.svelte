@@ -56,7 +56,10 @@
               <h4 class="sidebar-header">Experience</h4>
               <ul class="sidebar-list">
                 <li class="sidebar-item">
-                  <a href={resolve('/inmybag/fitch')}>Fitch Ratings</a>
+                  <a href={resolve('/inmybag/fitch-ft')}>Fitch Ratings</a>
+                </li>
+                <li class="sidebar-item">
+                  <a href={resolve('/inmybag/fitch')}>Contract</a>
                 </li>
                 <li class="sidebar-item">
                   <a href={resolve('/inmybag/intern')}>Internship</a>
