@@ -3,8 +3,11 @@
   
   <div class="finder-home">
     <h2 class="home-title">Welcome</h2>
-    <p class="home-subtitle">
+    <p class="home-subtitle desktop-only">
       Use the sidebar to explore different parts of my work and schooling experiences.
+    </p>
+    <p class="home-subtitle mobile-only">
+      Use the tabs above to explore different parts of my work and schooling experiences.
     </p>
   
     <div class="home-sections">
@@ -34,9 +37,14 @@
   
       <section class="home-section">
         <h3 class="section-heading">How to Navigate</h3>
-        <ul class="section-list">
+        <ul class="section-list desktop-only">
           <li>Click any item in the left sidebar to switch sections.</li>
           <li>The window title updates at the top to reflect where you are.</li>
+          <li>GitHub icons appear where projects have repositories for you to open.</li>
+        </ul>
+        <ul class="section-list mobile-only">
+          <li>Tap any tab at the top to switch sections.</li>
+          <li>Scroll the tabs left and right to see all options.</li>
           <li>GitHub icons appear where projects have repositories for you to open.</li>
         </ul>
       </section>
@@ -107,14 +115,19 @@
       margin-bottom: 4px;
     }
   
+    .mobile-only { display: none; }
+
     @media (max-width: 700px) {
       .home-sections {
         grid-template-columns: 1fr;
       }
-  
+
       .finder-home {
         padding: 12px 14px 18px;
       }
+
+      .desktop-only { display: none; }
+      .mobile-only { display: block; }
     }
   </style>
   
