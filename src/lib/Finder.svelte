@@ -386,62 +386,95 @@
     /* mobile */
     @media (max-width: 768px) {
       main {
-        padding: 1.5rem 1rem;
-        align-items: center;
+        padding: 0;
       }
-  
+
       .finder-window {
         flex-direction: column;
         width: 100%;
-        max-width: 600px;
         height: auto;
-        min-height: 400px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       }
-  
-      .finder-window.collapsed {
-        height: 70px;
-        min-height: 70px;
+
+      .finder-window.collapsed .sidebar-content,
+      .finder-window.collapsed .content-area {
+        display: none;
       }
-  
+
+      /* sidebar becomes a horizontal nav strip */
       .finder-sidebar {
         width: 100%;
+        flex: none;
         border-right: none;
         border-bottom: 1px solid #e0e0e4;
-        padding-top: 2.5rem;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
       }
-  
+
+      /* lights sit inline, no longer absolute */
       .control-lights {
-        top: 14px;
-        left: 16px;
+        position: static;
+        transform: none;
+        flex-shrink: 0;
       }
-  
+
+      .sidebar-content {
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
+        margin-top: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .sidebar-content::-webkit-scrollbar {
+        display: none;
+      }
+
+      .sidebar-header,
+      .sidebar-divider {
+        display: none;
+      }
+
+      .sidebar-section {
+        margin-bottom: 0;
+      }
+
+      .sidebar-list {
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
+      }
+
+      .sidebar-item {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.7rem;
+        border-radius: 999px;
+        background-color: #e8e8ea;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .sidebar-item:hover,
+      .sidebar-item a:hover {
+        background-color: #d8daea;
+      }
+
       .top-bar {
         justify-content: center;
-        padding: 0.4rem 0.75rem;
+        padding: 0.45rem 1rem;
       }
-  
+
       .content-area {
         padding: 0;
-      }
-    }
-  
-    @media (max-width: 480px) {
-      main {
-        padding: 1rem 0.75rem;
-      }
-  
-      .finder-window {
-        max-width: 100%;
-        min-height: 360px;
-      }
-  
-      .sidebar-item {
-        font-size: 0.9rem;
-        padding: 0.25rem 0.25rem;
-      }
-  
-      .title {
-        font-size: 0.92rem;
+        overflow-y: auto;
       }
     }
   </style>

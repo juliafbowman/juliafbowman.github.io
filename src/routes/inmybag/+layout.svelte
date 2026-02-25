@@ -27,11 +27,18 @@
       position: relative;
       min-height: 100vh;
     }
+
+    @media (max-width: 768px) {
+      .inmybag-main {
+        padding: 1rem 0.75rem;
+      }
+    }
   
     .page-container {
       position: relative;
       z-index: 2; /* above the flower */
       background-color: #ffffff00;  /* no color behind finder */
+      width: 100%;
     }
   
     .corner-flower {
